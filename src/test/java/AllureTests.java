@@ -50,6 +50,7 @@ public class AllureTests {
 
 
     @Test
+
     public void checkIssueWithSteps() {
         SelenideLogger.addListener("allure", new AllureSelenide());
         StepsForAnnotation steps = new StepsForAnnotation();
