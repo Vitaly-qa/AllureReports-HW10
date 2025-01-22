@@ -56,6 +56,7 @@ public class AllureTests {
         StepsForAnnotation steps = new StepsForAnnotation();
         steps.openMainPage();
         steps.findRepository();
+        steps.clicRepository();
         steps.checkElement();
     }
 }

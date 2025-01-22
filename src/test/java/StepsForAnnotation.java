@@ -6,6 +6,7 @@ import static org.openqa.selenium.By.linkText;
 
 
 public class StepsForAnnotation {
+
     public final String repo = "Vitaly-qa/AllureReports-HW10";
 
     @Step("Открываем главную страницу")
@@ -15,9 +16,13 @@ public class StepsForAnnotation {
 
     @Step("Находим репозиторий" + repo)
     public void findRepository() {
-        open("https://github.com/");
         $(".search-input").click();
         $("#query-builder-test").setValue(repo).pressEnter();
+
+    }
+
+    @Step("Нажать на ссылку найденого репозитория" + repo)
+    public void clicRepository() {
         $(linkText(repo)).click();
     }
 
